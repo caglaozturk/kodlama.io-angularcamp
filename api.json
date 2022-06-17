@@ -1,0 +1,174 @@
+{
+  "brands": [
+    {
+      "id": 1,
+      "name": "BMW",
+      "image": "./assets/logos/bmw.png"
+    },
+    {
+      "id": 2,
+      "name": "TOGG",
+      "image": "./assets/logos/togg.png"
+    },
+    {
+      "id": 3,
+      "name": "Mercedes",
+      "image": "./assets/logos/mercedes.png"
+    },
+    {
+      "id": 4,
+      "name": "Tofaş",
+      "image": "./assets/logos/tofas.png"
+    },
+    {
+      "id": 5,
+      "name": "Audi",
+      "image": "./assets/logos/audi.png"
+    },
+    {
+      "id": 6,
+      "name": "Fiat",
+      "image": "./assets/logos/fiat.png"
+    },
+    {
+      "id": 7,
+      "name": "Ford",
+      "image": "./assets/logos/ford.png"
+    }
+  ],
+  "cars": [
+    {
+      "id": 1,
+      "brandName": "BMW",
+      "brandId": 1,
+      "colorName": "White",
+      "colorId": 1,
+      "image": "./assets/car_images/bmw_car.jpg",
+      "dailyPrice": 400,
+      "description": "BMW aracı"
+    },
+    {
+      "id": 2,
+      "brandName": "TOGG",
+      "brandId": 2,
+      "colorName": "Red",
+      "colorId": 2,
+      "image": "./assets/car_images/togg_car.jpg",
+      "dailyPrice": 500,
+      "description": "TOGG aracı"
+    },
+    {
+      "brandId": 1,
+      "colorId": 3,
+      "image": "./assets/car_images/bmw_car.jpg",
+      "dailyPrice": "1200",
+      "description": "BMW aracı",
+      "brandName": "BMW",
+      "colorName": "Blue",
+      "id": 3
+    },
+    {
+      "brandId": 3,
+      "colorId": 4,
+      "image": "./assets/car_images/mercedes_car.jpg",
+      "dailyPrice": "1200",
+      "description": "Mercedes aracı",
+      "brandName": "Mercedes",
+      "colorName": "Orange",
+      "id": 4
+    }
+  ],
+  "colors": [
+    {
+      "id": 1,
+      "name": "White",
+      "image": "./assets/colors_images/white.png"
+    },
+    {
+      "id": 2,
+      "name": "Red",
+      "image": "./assets/colors_images/red.png"
+    },
+    {
+      "id": 3,
+      "name": "Blue",
+      "image": "./assets/colors_images/blue.png"
+    },
+    {
+      "id": 4,
+      "name": "Orange",
+      "image": "./assets/colors_images/orange.png"
+    },
+    {
+      "id": 5,
+      "name": "Pink",
+      "image": "./assets/colors_images/pink.png"
+    },
+    {
+      "name": "Brown",
+      "image": "./assets/colors_images/brown.png",
+      "id": 6
+    },
+    {
+      "name": "Green",
+      "image": "./assets/colors_images/green.png",
+      "id": 7
+    },
+    {
+      "name": "Purple",
+      "image": "./assets/colors_images/purple.png",
+      "id": 8
+    }
+  ],
+  "additionalServices": [
+    {
+      "id": 1,
+      "name": "Home Delivery",
+      "description": "The vehicle will be delivered to the address you specified, within 15 km of the district boundaries of the selected office, within working hours.",
+      "price": 109,
+      "image": "./assets/icon_images/home-delivery.png"
+    },
+    {
+      "id": 2,
+      "name": "Return from Address",
+      "description": "The vehicle will be returned within working hours from the address you specified, within the boundaries of the 15 km district of the selected office.",
+      "price": 109,
+      "image": "./assets/icon_images/return-address.png"
+    },
+    {
+      "id": 3,
+      "name": "Additional Driver",
+      "description": "Every driver who will drive the vehicle must be in the contract. Otherwise, the insurance and contract conditions will be invalid.",
+      "price": 30,
+      "image": "./assets/icon_images/additional-driver.png"
+    },
+    {
+      "id": 4,
+      "name": "GPS",
+      "description": "In case of suitability, the fee to be made in the office is 59 ₺ per day for 1 piece.",
+      "price": 15,
+      "image": "./assets/icon_images/gps.png"
+    },
+    {
+      "id": 5,
+      "name": "Baby Seat",
+      "description": "It is obligatory to use an infant/child car seat during the journey of babies and children under a certain age and weight in the vehicle.",
+      "price": 59,
+      "image": "./assets/icon_images/baby.png"
+    },
+    {
+      "id": 6,
+      "name": "Assurance Package",
+      "description": "It allows your reservation to be canceled without deduction if requested before the pick up time.",
+      "price": 45,
+      "image": "./assets/icon_images/assurance-package.png"
+    },
+    {
+      "id": 7,
+      "name": "Roadside Assistance Assistant",
+      "description": "It allows your reservation to be canceled without deduction if requested before the pick up time.",
+      "price": 59,
+      "image": "./assets/icon_images/roadside-assistance.png"
+    }
+  ]
+}
