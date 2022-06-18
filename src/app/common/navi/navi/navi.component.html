@@ -26,11 +26,11 @@
             <a class="nav-link" style="color:white" routerLink="/register">Kayıt Ol</a>
           </li>
         </ul>
-        <div class="login">
+        <app-cart-summary></app-cart-summary>
+        <div class="login me-3">
           <a class="justify-content-center btn btn-success" *ngIf="isloggedIn()==false" routerLink="/login">Login</a>
           <a class="btn btn-danger" *ngIf="isloggedIn()==true" (click)="logOut()" routerLink="/login">LogOut</a>
         </div>
-        <app-cart-summary></app-cart-summary>
       </div>
     </div>
   </nav>

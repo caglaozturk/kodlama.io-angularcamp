@@ -13,8 +13,6 @@ import { AdditionalCartItem } from 'src/app/models/additionalCartItem';
 export class CartSummaryComponent implements OnInit {
   cartItems: CartItem[] = [];
   additionalCartItems:AdditionalCartItem[] = []
-  cartTotal:number[];
-  total : number =0;
 
   constructor(public cartService: CartService) {}
 
@@ -24,7 +22,5 @@ export class CartSummaryComponent implements OnInit {
   getCartItems() {
     this.cartItems = this.cartService.list();
     this.additionalCartItems = this.cartService.list2();
-    this.cartTotal = this.cartService.list3()
-    // .reduce((a, b) => a + b, 0)
   }
 }

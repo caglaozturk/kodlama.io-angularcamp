@@ -15,13 +15,7 @@
         <span class="badge bg-secondary">{{cartItem.quantity}}</span>{{cartItem.additionalService.name}}<span class="badge bg-secondary">Sil</span></a>
       </li>
       <li><hr class="dropdown-divider"></li>
-      <li *ngFor="let total of cartTotal">
-        <a class="dropdown-item d-flex justify-content-between">
-         <span class="badge bg-secondary">{{total}}</span>
-        </a>
-        <p class="ms-3">Toplam: {{ total }}</p>
-      </li>
-      <p>{{ cartService.getAliTotal()}}</p>
+      <p class="ms-3">Toplam: {{ cartService.getTotal()}}</p>
       <li><a class="dropdown-item">Sepete git</a></li>
     </ul>
   </li>
