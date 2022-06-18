@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem("token", "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ")
         this.messageService.add({
           severity: 'success',
-          summary: 'Login Successfully'
+          detail: 'Login Successfully'
         })
         this.router.navigate([''])
       }
