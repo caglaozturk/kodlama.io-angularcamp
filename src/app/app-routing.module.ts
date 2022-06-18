@@ -9,20 +9,22 @@ import { RouterModule, Routes } from '@angular/router';
 import { CarComponent } from './components/cars/car/car.component';
 import { AddColorComponent } from './components/add-color/add-color.component';
 import { LoginGuard } from './guards/login.guard';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
+  {path:"",pathMatch:"full",component:CarComponent},
   {path:"cars/colorId/:id",component:CarComponent},
-  {path:"addBrand",component:AddBrandComponent},
-  {path:"editBrand/:id",component:EditBrandComponent},
-  {path:"cars/brandId/:id",component:CarComponent},
-  {path:"cars/carId/:id",component:EditCarComponent},
-  {path:"addColor",component:AddColorComponent},
+  {path:"addBrand",component:AddBrandComponent, canActivate:[LoginGuard]},
+  {path:"editBrand/:id",component:EditBrandComponent, canActivate:[LoginGuard]},
+  {path:"cars/brandId/:id",component:CarComponent, canActivate:[LoginGuard]},
+  {path:"cars/carId/:id",component:EditCarComponent, canActivate:[LoginGuard]},
+  {path:"addColor",component:AddColorComponent, canActivate:[LoginGuard]},
   {path:"car/addCar",component:AddCarComponent, canActivate:[LoginGuard]},
   {path:"car/carList",component:CarComponent},
   {path:"cars/rentCar/:id",component:RentCarComponent},
-  
-
-  
+  {path: "register", component: RegisterComponent},
+  {path: "login", component: LoginComponent}  
 ];
 
 @NgModule({

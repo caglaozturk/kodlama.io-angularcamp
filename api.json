@@ -120,6 +120,50 @@
       "id": 8
     }
   ],
+  "users": [
+    {
+      "id": 1,
+      "firstname": "cagla",
+      "lastname": "ozturk",
+      "email": "cagla@ozturk.com",
+      "password": "123"
+    },
+    {
+      "id": 2,
+      "firstname": "zubeyde",
+      "lastname": "ozturk",
+      "email": "zubeyde@gmail.com",
+      "password": "321"
+    },
+    {
+      "id": 3,
+      "firstname": "deniz",
+      "lastname": "acer",
+      "email": "deniz@ozturk.com",
+      "password": "456"
+    },
+    {
+      "id": 4,
+      "firstname": "duygu",
+      "lastname": "ucgun",
+      "email": "zuduygubeyde@gmail.com",
+      "password": "654"
+    },
+    {
+      "firstName": "Çağla",
+      "lastName": "Öztürk",
+      "email": "cagla@ozturk.com",
+      "password": "12",
+      "id": 5
+    },
+    {
+      "firstName": "Ömer",
+      "lastName": "Demirkan",
+      "email": "omer@ozturk.com",
+      "password": "12",
+      "id": 6
+    }
+  ],
   "additionalServices": [
     {
       "id": 1,

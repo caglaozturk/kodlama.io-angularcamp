@@ -9,24 +9,26 @@ import { BrandComponent } from './common/sidebar/brand/brand.component';
 import { AddBrandComponent } from './components/brands/add-brand/add-brand.component';
 import { EditBrandComponent } from './components/brands/edit-brand/edit-brand.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {ButtonModule} from 'primeng/button';
-import {ToastModule} from 'primeng/toast';
-import {RippleModule} from 'primeng/ripple';
-
-import {FormsModule} from '@angular/forms';
+import { ButtonModule } from 'primeng/button';
+import { ToastModule } from 'primeng/toast';
+import { RippleModule } from 'primeng/ripple';
+import { MessageService } from 'primeng/api';
+import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import {AccordionModule} from 'primeng/accordion';
+import { AccordionModule } from 'primeng/accordion';
 import { ColorComponent } from './common/sidebar/color/color.component';
 import { CarComponent } from './components/cars/car/car.component';
 import { AddColorComponent } from './components/add-color/add-color.component';
 import { AddCarComponent } from './components/cars/add-car/add-car.component';
 import { EditCarComponent } from './components/cars/update-car/edit-car/edit-car.component';
 
-import {TabMenuModule} from 'primeng/tabmenu';
+import { TabMenuModule } from 'primeng/tabmenu';
 import { UserCarListComponent } from './components/cars/user-car/user-car-list/user-car-list.component';
 import { RentCarComponent } from './components/cars/rent-car/rent-car.component';
 import { CartSummaryComponent } from './common/cart-summary/cart-summary/cart-summary.component';
-import {DropdownModule} from 'primeng/dropdown';
+import { DropdownModule } from 'primeng/dropdown';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import {DropdownModule} from 'primeng/dropdown';
     UserCarListComponent,
     RentCarComponent,
     CartSummaryComponent,
+    LoginComponent,
+    RegisterComponent,
     
   ],
   imports: [
@@ -62,7 +66,7 @@ import {DropdownModule} from 'primeng/dropdown';
     
     
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
