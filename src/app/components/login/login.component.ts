@@ -1,9 +1,9 @@
+import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { User } from 'src/app/models/user';
-import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
   loginForm:FormGroup
   user:User
 
-  constructor(private userService:UserService,private formbuilder:FormBuilder,private messageService:MessageService, private router:Router) { }
+  constructor(private authService:AuthService,private formbuilder:FormBuilder,private messageService:MessageService, private router:Router) { }
 
   ngOnInit(): void {
     this.createLoginForm();
@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
     if(this.loginForm.valid){
       this.user = Object.assign({},this.loginForm.value)
     }
-    this.userService.login(this.user).subscribe(data=>{
+    this.authService.login(this.user).subscribe(data=>{
       console.log(data);
       if(data.length>0){
         localStorage.setItem("token", "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ")
