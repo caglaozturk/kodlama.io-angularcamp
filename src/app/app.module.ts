@@ -29,6 +29,7 @@ import { CartSummaryComponent } from './common/cart-summary/cart-summary/cart-su
 import { DropdownModule } from 'primeng/dropdown';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { CanExitGuard } from './guards/can-exit.guard';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,7 @@ import { RegisterComponent } from './components/register/register.component';
     
     
   ],
-  providers: [MessageService],
+  providers: [MessageService, CanExitGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

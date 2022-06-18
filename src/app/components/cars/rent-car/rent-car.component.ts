@@ -46,5 +46,13 @@ export class RentCarComponent implements OnInit {
   addToCart2(additionalService:AdditionalService){
     this.cartService.addToCart2(additionalService)
   }
+  canDeactivate(): Promise<any> | boolean {
+    const confirmResult = confirm('Are you sure you want to leave this page ? ');
+    if (confirmResult === true) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
 }

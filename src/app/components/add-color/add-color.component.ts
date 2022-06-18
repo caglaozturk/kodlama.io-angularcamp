@@ -27,10 +27,6 @@ export class AddColorComponent implements OnInit {
     })
   }
   add(){
-
-
-
-
     if(this.colorAddForm.valid){
       this.color=Object.assign({},this.colorAddForm.value)
     }
@@ -45,6 +41,14 @@ export class AddColorComponent implements OnInit {
         location.reload();
       }, 1000);
     })
+  }
+  canDeactivate(): Promise<any> | boolean {
+    const confirmResult = confirm('Are you sure you want to leave this page ? ');
+    if (confirmResult === true) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
 }

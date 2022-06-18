@@ -1,4 +1,4 @@
-<ul class="list-group">
+<ul class="list-group me-3">
   <li *ngIf="cartItems.length>0" class="list-group-item nav-item dropdown text-decoration-none">
     <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
       Sepetiniz
@@ -15,7 +15,7 @@
         <span class="badge bg-secondary">{{cartItem.quantity}}</span>{{cartItem.additionalService.name}}<span class="badge bg-secondary">Sil</span></a>
       </li>
       <li><hr class="dropdown-divider"></li>
-      <p class="ms-3">Toplam: {{ cartService.getTotal()}}</p>
+      <p class="ms-3">Toplam: {{ cartService.getTotal() }}</p>
       <li><a class="dropdown-item">Sepete git</a></li>
     </ul>
   </li>

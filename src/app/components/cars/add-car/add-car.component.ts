@@ -77,5 +77,13 @@ export class AddCarComponent implements OnInit {
     });
     location.reload();
   }
+  canDeactivate(): Promise<any> | boolean {
+    const confirmResult = confirm('Are you sure you want to leave this page ? ');
+    if (confirmResult === true) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
 

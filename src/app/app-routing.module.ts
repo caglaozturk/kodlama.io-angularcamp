@@ -11,6 +11,7 @@ import { AddColorComponent } from './components/add-color/add-color.component';
 import { LoginGuard } from './guards/login.guard';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { CanExitGuard } from './guards/can-exit.guard';
 
 const routes: Routes = [
   {path:"",pathMatch:"full",component:CarComponent},
@@ -19,10 +20,10 @@ const routes: Routes = [
   {path:"editBrand/:id",component:EditBrandComponent, canActivate:[LoginGuard]},
   {path:"cars/brandId/:id",component:CarComponent, canActivate:[LoginGuard]},
   {path:"cars/carId/:id",component:EditCarComponent, canActivate:[LoginGuard]},
-  {path:"addColor",component:AddColorComponent, canActivate:[LoginGuard]},
-  {path:"car/addCar",component:AddCarComponent, canActivate:[LoginGuard]},
+  {path:"addColor",component:AddColorComponent, canDeactivate: [CanExitGuard], canActivate:[LoginGuard]},
+  {path:"car/addCar",component:AddCarComponent, canActivate:[LoginGuard], canDeactivate: [CanExitGuard]},
   {path:"car/carList",component:CarComponent},
-  {path:"cars/rentCar/:id",component:RentCarComponent},
+  {path:"cars/rentCar/:id",component:RentCarComponent, canDeactivate: [CanExitGuard]},
   {path: "register", component: RegisterComponent},
   {path: "login", component: LoginComponent}  
 ];
