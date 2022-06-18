@@ -1,4 +1,4 @@
-import { AdditionalCartItems } from './../../../models/cartItems';
+import { AdditionalCartItems, CartTotal } from './../../../models/cartItems';
 
 import { Component, OnInit } from '@angular/core';
 import { CartItem } from 'src/app/models/cartItem';
@@ -13,8 +13,10 @@ import { AdditionalCartItem } from 'src/app/models/additionalCartItem';
 export class CartSummaryComponent implements OnInit {
   cartItems: CartItem[] = [];
   additionalCartItems:AdditionalCartItem[] = []
+  cartTotal:number[];
+  total : number =0;
 
-  constructor(private cartService: CartService) {}
+  constructor(public cartService: CartService) {}
 
   ngOnInit(): void {
     this.getCartItems();
@@ -22,7 +24,7 @@ export class CartSummaryComponent implements OnInit {
   getCartItems() {
     this.cartItems = this.cartService.list();
     this.additionalCartItems = this.cartService.list2();
-    console.log("heyooo")
-    console.log(this.cartItems)
+    this.cartTotal = this.cartService.list3()
+    // .reduce((a, b) => a + b, 0)
   }
 }

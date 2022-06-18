@@ -8,6 +8,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CarComponent } from './components/cars/car/car.component';
 import { AddColorComponent } from './components/add-color/add-color.component';
+import { LoginGuard } from './guards/login.guard';
 
 const routes: Routes = [
   {path:"cars/colorId/:id",component:CarComponent},
@@ -16,7 +17,7 @@ const routes: Routes = [
   {path:"cars/brandId/:id",component:CarComponent},
   {path:"cars/carId/:id",component:EditCarComponent},
   {path:"addColor",component:AddColorComponent},
-  {path:"car/addCar",component:AddCarComponent},
+  {path:"car/addCar",component:AddCarComponent, canActivate:[LoginGuard]},
   {path:"car/carList",component:CarComponent},
   {path:"cars/rentCar/:id",component:RentCarComponent},
   
