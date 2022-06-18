@@ -29,15 +29,13 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    console.log("gey");
     if(this.loginForm.valid){
-      console.log("gey");
       this.user = Object.assign({},this.loginForm.value)
     }
     this.userService.login(this.user).subscribe(data=>{
       console.log(data);
       if(data.length>0){
-        localStorage.setItem("token", "true")
+        localStorage.setItem("token", "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ")
         this.messageService.add({
           severity: 'success',
           summary: 'Login Successfully'
