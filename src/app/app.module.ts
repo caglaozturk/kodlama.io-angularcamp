@@ -30,6 +30,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { CanExitGuard } from './guards/can-exit.guard';
+import { CartDetailComponent } from './components/cart-detail/cart-detail.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { CanExitGuard } from './guards/can-exit.guard';
     CartSummaryComponent,
     LoginComponent,
     RegisterComponent,
+    CartDetailComponent,
     
   ],
   imports: [

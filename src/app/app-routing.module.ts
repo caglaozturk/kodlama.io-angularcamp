@@ -1,9 +1,9 @@
+import { CartDetailComponent } from './components/cart-detail/cart-detail.component';
 import { RentCarComponent } from './components/cars/rent-car/rent-car.component';
 import { EditCarComponent } from './components/cars/update-car/edit-car/edit-car.component';
 import { AddCarComponent } from './components/cars/add-car/add-car.component';
 import { EditBrandComponent } from './components/brands/edit-brand/edit-brand.component';
 import { AddBrandComponent } from './components/brands/add-brand/add-brand.component';
-import { BrandComponent } from './common/sidebar/brand/brand.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CarComponent } from './components/cars/car/car.component';
@@ -23,9 +23,10 @@ const routes: Routes = [
   {path:"addColor",component:AddColorComponent, canDeactivate: [CanExitGuard], canActivate:[LoginGuard]},
   {path:"car/addCar",component:AddCarComponent, canActivate:[LoginGuard], canDeactivate: [CanExitGuard]},
   {path:"car/carList",component:CarComponent},
-  {path:"cars/rentCar/:id",component:RentCarComponent, canDeactivate: [CanExitGuard]},
+  {path:"cars/rentCar/:id",component:RentCarComponent},
   {path: "register", component: RegisterComponent},
-  {path: "login", component: LoginComponent}  
+  {path: "login", component: LoginComponent},
+  {path: "cart-detail", component:CartDetailComponent}
 ];
 
 @NgModule({

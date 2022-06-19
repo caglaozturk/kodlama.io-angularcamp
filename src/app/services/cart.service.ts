@@ -40,7 +40,10 @@ export class CartService {
     let item:CartItem = CartItems.find(c=>c.car.id===car.id);
     CartItems.splice(CartItems.indexOf(item),1); //splice silmek için kullanılır (git bellekteki yerini indeksini bul ve 1 tane sil)
   }
-
+  removeFromCart2(additionalService:AdditionalService){
+    let item:AdditionalCartItem = AdditionalCartItems.find(c=>c.additionalService.id===additionalService.id);
+    AdditionalCartItems.splice(AdditionalCartItems.indexOf(item),1);  //splice remove etmek demektir.
+  }
   list():CartItem[]{
     return CartItems;
   }
@@ -56,6 +59,19 @@ export class CartService {
 
     AdditionalCartItems.forEach(element => {
       total = total + element.quantity * element.additionalService.price   
+    });
+    return total;
+  }
+  getAdditionalTotal():any{
+    let total=0
+    AdditionalCartItems.forEach(element=>{
+      total=total+element.quantity*element.additionalService.price});
+      return total;
+  }
+  getCarTotal():any{
+    let total=0;
+    CartItems.forEach(element=>{
+      total=total+element.quantity*element.car.dailyPrice
     });
     return total;
   }
