@@ -50,7 +50,17 @@ export class CartService {
   list2():AdditionalCartItem[]{
     return AdditionalCartItems;
   }
-  
+  getTotalQuantity():any{
+    let total = 0;
+    CartItems.forEach(element => {
+      total = total + element.quantity
+    });
+
+    AdditionalCartItems.forEach(element => {
+      total = total + element.quantity   
+    });
+    return total;
+  }
   getTotal():any{
     let total = 0;
     CartItems.forEach(element => {
@@ -59,19 +69,6 @@ export class CartService {
 
     AdditionalCartItems.forEach(element => {
       total = total + element.quantity * element.additionalService.price   
-    });
-    return total;
-  }
-  getAdditionalTotal():any{
-    let total=0
-    AdditionalCartItems.forEach(element=>{
-      total=total+element.quantity*element.additionalService.price});
-      return total;
-  }
-  getCarTotal():any{
-    let total=0;
-    CartItems.forEach(element=>{
-      total=total+element.quantity*element.car.dailyPrice
     });
     return total;
   }

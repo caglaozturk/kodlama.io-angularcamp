@@ -5,7 +5,7 @@
             <div class="title">
                 <div class="row">
                     <div class="col"><h4><b>Cart Details</b></h4></div>
-                    <div class="col align-self-center text-right text-muted">Items</div>
+                    <div class="col align-self-center text-right text-muted">Items {{ cartService.getTotalQuantity() }}</div>
                 </div>
             </div>    
             <div class="row border-top border-bottom">
@@ -18,7 +18,7 @@
                     <div class="col">
                         <p>{{cartItem.quantity}}</p>
                     </div>
-                    <div class="col">{{cartService.getCarTotal()}} TL<span class="close" (click)="removeFromCart(cartItem.car)">&#10005;</span></div>
+                    <div class="col">{{cartItem.quantity*cartItem.car.dailyPrice}} TL<span class="close" (click)="removeFromCart(cartItem.car)">&#10005;</span></div>
                 </div>
             </div>
             <div class="row">
@@ -33,7 +33,7 @@
                     <div class="col">
                         <a href="#" class="border">{{additionalCartItem.quantity}}</a>
                     </div>
-                    <div class="col">{{cartService.getAdditionalTotal()}} TL<span class="close" (click)="removeFromCart2(additionalCartItem.additionalService)">&#10005;</span></div>
+                    <div class="col">{{additionalCartItem.quantity*additionalCartItem.additionalService.price}} TL<span class="close" (click)="removeFromCart2(additionalCartItem.additionalService)">&#10005;</span></div>
                 </div>
             </div>
             <div class="back-to-shop"><a routerLink="/car/carList">&leftarrow;</a><span class="text-muted">Back to shopping</span></div>
@@ -42,7 +42,7 @@
             <div><h5><b>Summary</b></h5></div>
             <hr>
             <div class="row">
-                <div class="col" style="padding-left:0;">ITEMS</div>
+                <div class="col" style="padding-left:0;">ITEMS {{ cartService.getTotalQuantity() }}</div>
                 <div class="col text-right"></div>
             </div>
             <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">

@@ -25,8 +25,8 @@
       <tr>
         <th scope="row"></th>
         <td><img src="{{additionalService.image}}" style="width:80px"></td>
-        <td>{{additionalService.name}}</td>
-        <td>{{additionalService.price}}</td>
+        <td style="width:400px">{{additionalService.name}}</td>
+        <td style="width:200px">{{additionalService.price}}</td>
         <td><i class="fa-solid fa-angle-down fa-xl" style="padding-right:5px;color:#034078"></i>Details</td>
         <td><button class="btn btn-light" (click)="addToCart2(additionalService)"><i class="fa-solid fa-circle-plus fa-xl" style="color: #034078; padding-right: 5px;"></i>Add</button></td>
       </tr>
@@ -36,5 +36,4 @@
           {{additionalService.description}}
         </a>
     </div>
- </div>
-  
+</div>
