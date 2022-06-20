@@ -1,0 +1,109 @@
+<div class="container card-0 justify-content-center">
+  <div class="card-body px-sm-4 px-0">
+    <div class="row justify-content-center mb-5">
+      <div class="col-md-10 col">
+        <h3 class="font-weight-bold ml-md-0 mx-auto text-center text-sm-left">
+          Rezervasyon
+        </h3>
+        <p class="mt-md-4 ml-md-0 ml-2 text-center text-sm-left">
+            KONTROL ET VE REZERVASYONU TAMAMLA
+        </p>
+      </div>
+    </div>
+    <div class="row justify-content-center round">
+      <div class="col-lg-10 col-md-12">
+        <div class="card shadow-lg card-1">
+        <form [formGroup]="checkoutForm" (ngSubmit)="add()">
+          <div class="card-body inner-card">
+            <label class="row justify-content-center">Kişisel Bilgiler</label>
+            <div class="row justify-content-center">
+              <div class="col-lg-5 col-md-6 col-sm-12">
+                <div class="form-group">
+                  <label for="name">İsim</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    formControlName="name"
+                    placeholder="İsim"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="telephone">Telefon</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="telephone"
+                    formControlName="telephone"
+                    placeholder="Telefon"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="cityId">Şehir</label>
+                  <select class="form-control" name="cityId" id="cityId" formControlName="cityId">
+                    <option value="">Seçiniz</option>
+                    <option *ngFor="let city of cities" [value]="city.id">{{ city.name }}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg-5 col-md-6 col-sm-12">
+                <div class="form-group">
+                  <label for="surname">Soyisim</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="surname"
+                    formControlName="surname"
+                    placeholder="Soyisim"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">E-posta Adresi</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    formControlName="email"
+                    placeholder="E-posta Adresi"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="date">Doğum Tarihi</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="date"
+                    formControlName="date"
+                    placeholder="Doğum Tarihi"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-md-12 col-lg-10 col-12">
+                <div class="form-group">
+                  <label for="address">Adres</label>
+                  <textarea
+                    class="form-control rounded-0"
+                    id="address"
+                    formControlName="address"
+                    rows="4" cols="50"
+                    placeholder="Adres"
+                  ></textarea>
+                </div>
+                <div class="mb-2 mt-4">
+                  <div class="text-right">
+                    <button type="submit" [disabled]="checkoutForm.invalid" class="btn btn-primary btn-block">
+                      <small class="font-weight-bold">Kaydet</small>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

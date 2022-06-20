@@ -1,3 +1,5 @@
 arabayla ilgili bilgileri girerken vazgeçtim o sırada sizi uyarsın emin misin şeklinde
 candiactivate ile yapabilirsin
 interceptor: araya girme kesme, bekletme anlamına gelir
+
+angular'ada rxjs kütüphanesi
