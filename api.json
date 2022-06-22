@@ -184,6 +184,35 @@
       "cityId": "51",
       "address": "ss",
       "id": 2
+    },
+    {
+      "name": "Çağla Öztürk",
+      "surname": "Ergün",
+      "email": "cagla@basefy.com",
+      "telephone": "05464763593",
+      "date": "2022-06-29",
+      "cityId": "34",
+      "address": "Avcılar",
+      "total": 0,
+      "car": {
+        "brandId": 3,
+        "colorId": 4,
+        "image": "./assets/car_images/mercedes_car.jpg",
+        "dailyPrice": "1200",
+        "description": "Mercedes aracı",
+        "brandName": "Mercedes",
+        "colorName": "Orange",
+        "id": 4
+      },
+      "quantity": 1,
+      "additionalService": {
+        "id": 2,
+        "name": "Return from Address",
+        "description": "The vehicle will be returned within working hours from the address you specified, within the boundaries of the 15 km district of the selected office.",
+        "price": 109,
+        "image": "./assets/icon_images/return-address.png"
+      },
+      "id": 4
     }
   ],
   "additionalServices": [

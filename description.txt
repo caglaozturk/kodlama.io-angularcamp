@@ -3,3 +3,7 @@ candiactivate ile yapabilirsin
 interceptor: araya girme kesme, bekletme anlamına gelir
 
 angular'ada rxjs kütüphanesi
+
+özgeçmiş:3 temmuz teslim tarihi
+git:3 temmuz teslim tarihi
+rentacar
