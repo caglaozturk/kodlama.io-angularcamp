@@ -33,6 +33,7 @@ import { CanExitGuard } from './guards/can-exit.guard';
 import { CartDetailComponent } from './components/cart-detail/cart-detail.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     RegisterComponent,
     CartDetailComponent,
     CheckoutComponent,
+    ContactComponent,
     
   ],
   imports: [
