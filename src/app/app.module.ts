@@ -35,6 +35,13 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { ContactComponent } from './components/contact/contact.component';
 
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient } from '@angular/common/http';
+
+export function httpTranslateLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,7 +77,15 @@ import { ContactComponent } from './components/contact/contact.component';
     FormsModule,
     AccordionModule,
     TabMenuModule,
-    DropdownModule
+    DropdownModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: httpTranslateLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
     
     
   ],

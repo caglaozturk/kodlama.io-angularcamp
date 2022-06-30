@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { User } from 'src/app/models/user';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-login',
@@ -15,8 +16,15 @@ export class LoginComponent implements OnInit {
   loginForm:FormGroup
   user:User
 
-  constructor(private authService:AuthService,private formbuilder:FormBuilder,private messageService:MessageService, private router:Router) { }
+  constructor(private authService:AuthService,private formbuilder:FormBuilder,private messageService:MessageService, private router:Router,
+    public translate:TranslateService) {
+      translate.addLangs(['tr', 'en']);
+      translate.setDefaultLang('tr');
+  }
 
+  translateLanguageTo(lang: string) {
+    this.translate.use(lang);
+  }
   ngOnInit(): void {
     this.createLoginForm();
   }
