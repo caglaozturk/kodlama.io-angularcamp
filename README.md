@@ -1,28 +1,20 @@
-# Kodlama.io
-## _Angular_
+# kodlama.io
+## _Rent a car_
 
-Angular projesi
+Angular Projesi
 
-- HTMl
+- Html
 - Css
 - Angular
 
 ## Özellikler
 
-> Model Ekleme, Silme ve güncelleme yapıldı
-> Login, register işlemleri yapıldı
-> Api'den veriler çekildi
-> Arabalar listelendi
-
-This text you see here is *actually- written in Markdown! To get a feel
-for Markdown's syntax, type some text into the left window and
-watch the results in the right.
+> Araba ekleme, silme, güncelleme sayfası yapıldı
+> Model ekleme, silme, güncelleme sayfası yapıldı
 
 ## Kurulum
 
-Rent a car projesinin çalışabilmesi için [Node.js](https://nodejs.org/) v13+ gereklidir.
-
-Bağımlılıkları ve devDependencies'i kurun ve sunucuyu başlatın.
+git clone https://github.com/caglaozturk/kodlama.io-angularcamp.git
 
 ```sh
 cd kodlama.io-angularcamp
